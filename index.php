@@ -420,7 +420,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                     <div class="quote-item-footer">
                       <!-- <img loading="lazy" class="testimonial-thumb" src="images/clients/testimonial2.png" alt="testimonial"> -->
                       <div class="quote-item-info">
-                          <h3 class="quote-author">Mr Martin</h3>
+                          <h3 class="quote-author">Mr Asante</h3>
                           <span class="quote-subtext">CEO, Super Santi</span>
                       </div>
                     </div>
