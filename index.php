@@ -286,7 +286,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
           <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
               <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img">
+                <img loading="lazy" src="images/user/icon-image/fact3.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="65">0</span></h2>
@@ -296,7 +296,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
           <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
               <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact4.png" alt="facts-img">
+                <img loading="lazy" src="images/user/icon-image/fact4.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="4">0</span></h2>
