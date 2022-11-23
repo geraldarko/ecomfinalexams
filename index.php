@@ -339,7 +339,7 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">Semi Detached Office Building</a>
+                    <a href="view/plan.php">Semi Detached Office Building</a>
                   </h3>
                   <p class="project-cat">Commercial, Exterior</p>
                 </div>
@@ -356,7 +356,7 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html"> Special Home and Office Plaza</a>
+                    <a href="view/plan.php"> Special Home and Office Plaza</a>
                   </h3>
                   <p class="project-cat">Homes and Offices</p>
                 </div>
