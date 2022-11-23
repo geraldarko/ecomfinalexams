@@ -185,7 +185,7 @@ include("../settings/core.php");
               </div>
               <div class="custom-file mt-3 mb-3">
                 <input id="fileInput" type="file" style="display:none;" />
-                <input type="file" name="pimage" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE"  />
+                <input type="file" name="pimage" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE"/>
               </div> 
 
             </div>

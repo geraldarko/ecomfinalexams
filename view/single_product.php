@@ -18,6 +18,9 @@ WEBSITE: https://themefisher.com
 TWITTER: https://twitter.com/themefisher
 FACEBOOK: https://www.facebook.com/themefisher
 -->
+<?php require("../controllers/plan_controller.php");
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -172,6 +175,17 @@ FACEBOOK: https://www.facebook.com/themefisher
     <!--/ Header end -->
 
 
+    <?php
+             $pid = $_GET['id']; 
+              $product_one = select_product_ctrl($pid);
+
+            $product_id = $product_one['plan_id'];
+            $product_name = $product_one['plan_title'];
+            
+          ?>
+
+
+
     <section class="products section bg-gray">
       <div class="container">
         <div class="row mt-20">
@@ -182,7 +196,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                   <!-- me art lab slider -->
                   <div class='carousel-inner '>
                     <div class='item active'>
-                      <img src='../images/user/projects/project1.jpeg' alt=''
+                      <img src=<?php echo $product_one['plan_image']?>
                         data-zoom-image="" width="100%" />
                     </div>
                   </div>
@@ -192,19 +206,15 @@ FACEBOOK: https://www.facebook.com/themefisher
               </div>
             </div>
           </div>
+
           <div class="col-md-7">
             <div class="single-product-details">
-              <h3>Contemporary House, 3 Bedroom</h3>
-              <p class="product-price">Price: $300</p>
-
-              <div id="details" class="">
-                <h5>Plan Style: Modern</h5>
-
-              </div>
+              <h3><?php echo $product_one['plan_title']?></h3>
+              <p class="product-price">GH₵ <?php echo $product_one['plan_price']?></p>
 
               <div class="tab-content patternbg">
                 <div id="details" class="">
-                  <h5>Product Description: Offices with bathrooms and a plaza</h5>
+                  <h5><?php echo $product_one['plan_desc']?></h5>
 
                 </div>
               </div>

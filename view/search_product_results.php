@@ -19,8 +19,15 @@ TWITTER: https://twitter.com/themefisher
 FACEBOOK: https://www.facebook.com/themefisher
 -->
 
+<?php require("../controllers/plan_controller.php");
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
@@ -58,200 +65,182 @@ FACEBOOK: https://www.facebook.com/themefisher
 
   <link rel="stylesheet" href="../css/user/avicss/style.css">
 
-<!-- Themefisher Icon font -->
-<link rel="stylesheet" href="../plugins/aviplugins/themefisher-font/style.css">
+  <!-- Themefisher Icon font -->
+  <link rel="stylesheet" href="../plugins/aviplugins/themefisher-font/style.css">
 
 
 </head>
+
 <body>
   <div class="body-inner">
 
     <div id="top-bar" class="top-bar">
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-md-8">
-                <ul class="top-info text-center text-md-left">
-                    <li><i class="fas fa-map-marker-alt"></i> <p class="info-text">Darkus Architectural Services, Ghana</p>
-                    </li>
-                </ul>
-              </div>
-              <!--/ Top info end -->
-  
-              <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
-                <ul class="list-unstyled">
-                    <li>
-                      <a title="Facebook" href="https://facebbok.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-                      </a>
-                      <a title="Twitter" href="https://twitter.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-twitter"></i></span>
-                      </a>
-                      <a title="Instagram" href="https://instagram.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                      </a>
-                      <a title="Linkdin" href="https://github.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-github"></i></span>
-                      </a>
-                    </li>
-                </ul>
-              </div>
-              <!--/ Top social end -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <ul class="top-info text-center text-md-left">
+              <li><i class="fas fa-map-marker-alt"></i>
+                <p class="info-text">Darkus Architectural Services, Ghana</p>
+              </li>
+            </ul>
           </div>
-          <!--/ Content row end -->
+          <!--/ Top info end -->
+
+          <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+            <ul class="list-unstyled">
+              <li>
+                <a title="Facebook" href="https://facebbok.com/themefisher.com">
+                  <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a title="Twitter" href="https://twitter.com/themefisher.com">
+                  <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                </a>
+                <a title="Instagram" href="https://instagram.com/themefisher.com">
+                  <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a title="Linkdin" href="https://github.com/themefisher.com">
+                  <span class="social-icon"><i class="fab fa-github"></i></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--/ Top social end -->
         </div>
-        <!--/ Container end -->
+        <!--/ Content row end -->
+      </div>
+      <!--/ Container end -->
     </div>
     <!--/ Topbar end -->
-<!-- Header start -->
-<header id="header" class="header-two">
-  <div class="site-navigation">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
+    <!-- Header start -->
+    <header id="header" class="header-two">
+      <div class="site-navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
               <nav class="navbar navbar-expand-lg navbar-light p-0">
-                
+
                 <div class="logo">
-                    <a class="d-block" href="index.html">
-                      <!-- <img loading="lazy" src="images/logo.png" alt="Constra"> -->
-                    </a>
+                  <a class="d-block" href="index.html">
+                    <!-- <img loading="lazy" src="images/logo.png" alt="Constra"> -->
+                  </a>
                 </div><!-- logo end -->
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <div id="navbar-collapse" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav ml-auto align-items-center">
-                      <li class="nav-item dropdown active">
-                           <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
-                          <ul class="dropdown-menu" role="menu">
-                          </ul>
-                      </li>
+                  <ul class="nav navbar-nav ml-auto align-items-center">
+                    <li class="nav-item dropdown active">
+                    <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
+                    <ul class="dropdown-menu" role="menu">
+                    </ul>
+                    </li>
 
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="faq.php">Faq</a></li>
-                            <li><a href="services.php">Services</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                       
-                          </ul>
-                      </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="faq.php">Faq</a></li>
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="contact.php">Contact</a></li>
 
-                
+                      </ul>
+                    </li>
+
+
                     <li class="nav-item"><a class="nav-link" href="plan.php">Plans</a></li>
 
                     <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
 
-                     <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
 
-                      <li class="header-get-a-quote">
-                          <a class="btn btn-primary" href="plan.php">Get Your Building Plans</a>
-                      </li>
-                    </ul>
+                    <li class="header-get-a-quote">
+                      <a class="btn btn-primary" href="plan.php">Get Your Building Plans</a>
+                    </li>
+                  </ul>
                 </div>
               </nav>
+            </div>
+            <!--/ Col end -->
           </div>
-          <!--/ Col end -->
+          <!--/ Row end -->
         </div>
-        <!--/ Row end -->
-    </div>
-    <!--/ Container end -->
+        <!--/ Container end -->
 
-  </div>
-  <!--/ Navigation end -->
-</header>
-<!--/ Header end -->
+      </div>
+      <!--/ Navigation end -->
+    </header>
+    <!--/ Header end -->
 
 
-<section class="products section bg-gray">
-	<div class="container">
-		<div class="row">
-			<div class="title text-center">
-                <h2>Plan Results</h2>
-                <div class="input-group">
-                    <div class="form-outline">
-                      <input type="search" id="form1" class="form-control" placeholder="Search For Plans" />
-                      <!-- <label class="form-label" for="form1">Search</label> -->
-                    </div>
-                    <br>
-                    <button type="button" class="btn btn-primary">
-                      <i class="fas fa-search"></i>
-                    </button>
+    <section class="products section bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="title text-center">
+            <h2>Plan Results</h2>
+            <div class="input-group">
+              <div class="form-outline">
+                <form action="search_product_results.php" method="GET">
+                  <input type="text" placeholder="Search for plans" name="search" id="search">
+
+                </form>
+
+                <!-- <label class="form-label" for="form1">Search</label> -->
+              </div>
+              <br>
+              <button type="submit" name="search" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+          <?php
+          $search = $_GET['search'];
+
+
+          $product_search = search_products_ctrl($search);
+
+          foreach ($product_search as $product_one) {
+            $product_id = $product_one['plan_id'];
+            $product_name = $product_one['plan_title'];
+          ?>
+
+            <div class="col-md-4">
+              <div class="product-item">
+                <div class="product-thumb">
+                  <!-- <span class="bage">Sale</span> -->
+                  <img class="img-responsive" src="<?php echo $product_one['plan_image'] ?>" alt="product-img" />
+                  <div class="preview-meta">
+                    <ul>
+                      <li>
+                        <?php echo $product_one['plan_id']; ?>"><i class="tf-ion-ios-eye"></i>
+                      </li>
+                      <li>
+                        <?php echo $product_one['plan_id']; ?>"><i class="tf-ion-android-cart"></i>
+                      </li>
+                    </ul>
                   </div>
-			</div>
-		</div>
+                </div>
+                <div class="product-content">
+                  <h4><?php echo $product_one['plan_title'] ?></h4>
+                  <p class="price">GH₵ <?php echo $product_one['plan_price'] ?></p>
+                </div>
+              </div>
+            </div>
 
-		<div class="row">
-			
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<!-- <span class="bage">Sale</span> -->
-						<img class="img-responsive" src="../images/user/projects/project3.png" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-                  <a href="single_product.php"><i class="tf-ion-ios-eye"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="../images/user/projects/project1.jpeg" alt="product-img" />
-						<div class="preview-meta">
-                            <ul>
-								<li>
-                  <a href="single_product.html"><i class="tf-ion-ios-eye"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Rainbow Shoes</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="../images/user/projects/project2.jpeg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-                   <a href="single_product.html"><i class="tf-ion-ios-eye"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Strayhorn SP</a></h4>
-						<p class="price">$230</p>
-					</div>
-				</div>
-			</div>
-		
-		<!-- Modal -->
-		<!-- <div class="modal product-modal fade" id="product-modal">
+
+          <?php } ?>
+
+          <!-- Modal -->
+          <!-- <div class="modal product-modal fade" id="product-modal">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<i class="tf-ion-close"></i>
 			</button>
@@ -281,23 +270,23 @@ FACEBOOK: https://www.facebook.com/themefisher
 		  	</div>
 		</div>/.modal -->
 
-		</div>
-	</div>
-</section>
+        </div>
+      </div>
+    </section>
 
-<br>
-<section class="subscribe no-padding">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-4">
-          <div class="subscribe-call-to-acton">
+    <br>
+    <section class="subscribe no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="subscribe-call-to-acton">
               <h3>Can We Help?</h3>
               <h4>(+233) 244 417 579</h4>
-          </div>
-        </div><!-- Col end -->
+            </div>
+          </div><!-- Col end -->
 
-        <div class="col-lg-8">
-          <div class="ts-newsletter row align-items-center">
+          <div class="col-lg-8">
+            <div class="ts-newsletter row align-items-center">
               <div class="col-md-5 newsletter-introtext">
                 <h4 class="text-white mb-0">Newsletter Sign-up</h4>
                 <p class="text-white">Latest updates and news</p>
@@ -305,126 +294,124 @@ FACEBOOK: https://www.facebook.com/themefisher
 
               <div class="col-md-7 newsletter-form">
                 <form action="#" method="post">
-                    <div class="form-group">
-                      <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
-                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">
-                    </div>
+                  <div class="form-group">
+                    <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
+                    <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">
+                  </div>
                 </form>
               </div>
-          </div><!-- Newsletter end -->
-        </div><!-- Col end -->
-
-    </div><!-- Content row end -->
-  </div>
-  <!--/ Container end -->
-</section>
-
-<!--/ News end -->
-
-  <footer id="footer" class="footer bg-overlay">
-    <div class="footer-main">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-lg-4 col-md-6 footer-widget footer-about">
-            <h3 class="widget-title">About Us</h3>
-            <!-- <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra"> -->
-            <p>Darkus Architecture Service provides services that include concept design development, preparation of construction documents and construction administration</p>
-            <div class="footer-social">
-              <ul>
-                <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                      class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
-                      class="fab fa-instagram"></i></a></li>
-                <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
-              </ul>
-            </div><!-- Footer social end -->
+            </div><!-- Newsletter end -->
           </div><!-- Col end -->
 
-          <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-            <h3 class="widget-title">Working Hours</h3>
-            <div class="working-hours">
-              We work 5 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
-              Hotline and Contact form.
-              <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
-              <!-- <br> Saturday: <span class="text-right">12:00 - 15:00</span>
+        </div><!-- Content row end -->
+      </div>
+      <!--/ Container end -->
+    </section>
+
+    <!--/ News end -->
+
+    <footer id="footer" class="footer bg-overlay">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 col-md-6 footer-widget footer-about">
+              <h3 class="widget-title">About Us</h3>
+              <!-- <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra"> -->
+              <p>Darkus Architecture Service provides services that include concept design development, preparation of construction documents and construction administration</p>
+              <div class="footer-social">
+                <ul>
+                  <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                </ul>
+              </div><!-- Footer social end -->
+            </div><!-- Col end -->
+
+            <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+              <h3 class="widget-title">Working Hours</h3>
+              <div class="working-hours">
+                We work 5 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+                Hotline and Contact form.
+                <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
+                <!-- <br> Saturday: <span class="text-right">12:00 - 15:00</span>
               <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span> -->
+              </div>
+            </div><!-- Col end -->
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+              <h3 class="widget-title">Services</h3>
+              <ul class="list-arrow">
+                <li><a href="services.php">Interior Design</a></li>
+                <li><a href="services.php">Exterior Design</a></li>
+                <li><a href="services.php">Construction Management</a></li>
+              </ul>
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Footer main end -->
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="copyright-info">
+                <span>Copyright &copy; <script>
+                    document.write(new Date().getFullYear())
+                  </script>, Designed &amp; Developed by Gerald Industries</a></span>
+              </div>
             </div>
-          </div><!-- Col end -->
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-            <h3 class="widget-title">Services</h3>
-            <ul class="list-arrow">
-              <li><a href="services.php">Interior Design</a></li>
-              <li><a href="services.php">Exterior Design</a></li>
-              <li><a href="services.php">Construction Management</a></li>
-            </ul>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
-      </div><!-- Container end -->
-    </div><!-- Footer main end -->
-
-    <div class="copyright">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="copyright-info">
-              <span>Copyright &copy; <script>
-                  document.write(new Date().getFullYear())
-                </script>, Designed &amp; Developed by Gerald Industries</a></span>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="footer-menu text-center text-md-right">
-              <ul class="list-unstyled">
-                <!-- <li><a href="about.html">About</a></li> -->
-                <!-- <li><a href="team.html">Our people</a></li>
+            <div class="col-md-6">
+              <div class="footer-menu text-center text-md-right">
+                <ul class="list-unstyled">
+                  <!-- <li><a href="about.html">About</a></li> -->
+                  <!-- <li><a href="team.html">Our people</a></li>
                 <li><a href="faq.html">Faq</a></li>
                 <li><a href="news-left-sidebar.html">Blog</a></li>
                 <li><a href="pricing.html">Pricing</a></li> -->
-              </ul>
+                </ul>
+              </div>
             </div>
+          </div><!-- Row end -->
+
+          <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+            <button class="btn btn-primary" title="Back to Top">
+              <i class="fa fa-angle-double-up"></i>
+            </button>
           </div>
-        </div><!-- Row end -->
 
-        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
-          <button class="btn btn-primary" title="Back to Top">
-            <i class="fa fa-angle-double-up"></i>
-          </button>
-        </div>
-
-      </div><!-- Container end -->
-    </div><!-- Copyright end -->
-  </footer><!-- Footer end -->
+        </div><!-- Container end -->
+      </div><!-- Copyright end -->
+    </footer><!-- Footer end -->
 
 
-  <!-- Javascript Files
+    <!-- Javascript Files
   ================================================== -->
 
-  <!-- initialize jQuery Library -->
-  <script src="../plugins/jQuery/jquery.min.js"></script>
-  <!-- Bootstrap jQuery -->
-  <script src="../plugins/bootstrap/bootstrap.min.js" defer></script>
-  <!-- Slick Carousel -->
-  <script src="../plugins/slick/slick.min.js"></script>
-  <script src="../plugins/slick/slick-animation.min.js"></script>
-  <!-- Color box -->
-  <script src="../plugins/colorbox/jquery.colorbox.js"></script>
-  <!-- shuffle -->
-  <script src="../plugins/shuffle/shuffle.min.js" defer></script>
+    <!-- initialize jQuery Library -->
+    <script src="../plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="../plugins/bootstrap/bootstrap.min.js" defer></script>
+    <!-- Slick Carousel -->
+    <script src="../plugins/slick/slick.min.js"></script>
+    <script src="../plugins/slick/slick-animation.min.js"></script>
+    <!-- Color box -->
+    <script src="../plugins/colorbox/jquery.colorbox.js"></script>
+    <!-- shuffle -->
+    <script src="../plugins/shuffle/shuffle.min.js" defer></script>
 
 
-  <!-- Google Map API Key-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
-  <!-- Google Map Plugin-->
-  <script src="../plugins/google-map/map.js" defer></script>
+    <!-- Google Map API Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+    <!-- Google Map Plugin-->
+    <script src="../plugins/google-map/map.js" defer></script>
 
-  <!-- Template custom -->
-  <script src="../js/script.js"></script>
+    <!-- Template custom -->
+    <script src="../js/script.js"></script>
 
   </div><!-- Body inner end -->
-  </body>
+</body>
 
-  </html>
+</html>
