@@ -121,27 +121,39 @@ require("../controllers/plan_controller.php");
           <center> <h2 class="tm-block-title">Plan Categories</h2></center> 
             <div class="tm-product-table-container">
               <table class="table tm-table-small tm-product-table">
-                <tbody>
+                <thead>
+                  <tr>
+                    <th>CATEGORY NAME</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
 
+                <tbody>
                 <?php
                   $catlist = select_all_category_ctrl();
-                  foreach ($catlist as $value){ 
-                  $cid = $value['cat_id'];
-                ?>
+                  //var_dump($catlist);
+
+                  foreach ($catlist as $value):?>
+                  <!-- //$cid = $value['cat_id']; -->
+                
              
                   <tr>
-                    <td class="tm-product-name"><?php echo ($value['cat_name']);
-                     $cid = $value['cat_id'] ?></td>
-                    <td class="text-center">
-                     <a href='a_updatecat.php?cid=<?php echo($cid);?>'class="tm-product-delete-link">
+                    <td class="tm-product-name">
+                      <?php echo ($value['cat_name']);?>
+                    </td>
+                    <td>
+                     <a href="a_updatecat.php?cid=<?php echo $value['cat_id'];?>" class="tm-product-delete-link">
                             <i class="far fa-edit tm-product-delete-icon"></i>
                       </a>
-                      <a href="../actions/delete_cat.php?cid=<?php echo($cid);?>" class="tm-product-delete-link">
+                    </td>
+                    <td>
+                      <a href="../actions/delete_cat.php?cid=<?php $value['cat_id'];?>" class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
-                      <?php
-                  }?>
                     </td>
+                  </tr>
+                      <?php endforeach; ?>
                 </tbody>
               </table>
             </div>
