@@ -140,7 +140,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                           <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
     
                           <li class="header-get-a-quote">
-                              <a class="btn btn-primary" href="plan.html">Get Your Building Plans</a>
+                              <a class="btn btn-primary" href="plan.php">Get Your Building Plans</a>
                           </li>
                         </ul>
                     </div>
