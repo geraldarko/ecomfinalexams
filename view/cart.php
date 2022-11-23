@@ -123,7 +123,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav ml-auto align-items-center">
                       <li class="nav-item dropdown active">
-                           <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
                           <ul class="dropdown-menu" role="menu">
                           </ul>
                       </li>
