@@ -148,7 +148,7 @@ require("../controllers/plan_controller.php");
                       </a>
                     </td>
                     <td>
-                      <a href="../actions/delete_cat.php?cid=<?php $value['cat_id'];?>" class="tm-product-delete-link">
+                      <a href="../actions/delete_cat.php?cid=<?php echo $value['cat_id'];?>" class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
                       </a>
                     </td>
