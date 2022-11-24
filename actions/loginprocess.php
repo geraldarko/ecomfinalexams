@@ -17,9 +17,9 @@ if (isset($_POST["submit"])) {
         $_SESSION['loggedin']=true;
 
         if($_SESSION['role'] == 1){
-        header("location: ../view/a_dashboard.php");
+        header("Location: ../view/a_dashboard.php");
         }else{
-        header("location: ../index.php");
+        header("Location: ../index.php");
         }
 
     }
