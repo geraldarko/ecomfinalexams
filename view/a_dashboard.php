@@ -1,3 +1,17 @@
+<?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1){
+    header("location: ../index.php");
+    exit;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,19 +56,19 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="a_addcategories.php">
-                                <i class="fas fa-shopping-cart"></i>
+                                <i class="fa fa-square"></i>
                                 Categories
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="a_addstyles.php">
-                                <i class="fas fa-shopping-cart"></i>
+                                <i class="fa fa-map"></i>
                                 Styles
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="a_plan.php">
-                                <i class="fas fa-shopping-cart"></i>
+                                <i class="fa fa-home"></i>
                                 Plans
                             </a>
                         </li>
@@ -68,7 +82,7 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link d-block" href="login.html">
+                            <a class="nav-link d-block" href="../actions/logout.php">
                                 Admin, <b>Logout</b>
                             </a>
                         </li>

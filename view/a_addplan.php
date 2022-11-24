@@ -1,6 +1,16 @@
 <?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1){
+    header("location: ../index.php");
+    exit;
+}
+
 require("../controllers/plan_controller.php");
-include("../settings/core.php");
+// include("../settings/core.php");
 
 ?>
 
@@ -64,14 +74,14 @@ include("../settings/core.php");
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="accounts.html">
+            <a class="nav-link" href="a_viewaccounts.php">
               <i class="far fa-user"></i> Accounts
             </a>
           </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link d-block" href="login.html">
+            <a class="nav-link d-block" href="../actions/logout.php">
               Admin, <b>Logout</b>
             </a>
           </li>

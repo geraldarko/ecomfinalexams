@@ -1,4 +1,15 @@
 <?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1){
+    header("location: ../index.php");
+    exit;
+}
+
+
 require("../controllers/plan_controller.php");
 include("../settings/core.php");
 

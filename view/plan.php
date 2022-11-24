@@ -20,6 +20,13 @@ FACEBOOK: https://www.facebook.com/themefisher
 -->
 
 <?php
+
+session_start();
+$message = "<a class='nav-link' href='view/login.php'>Login</a>";
+if (isset($_SESSION['loggedin'])){
+  $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
+}
+
 require("../controllers/plan_controller.php");
 ?>
 
@@ -151,7 +158,7 @@ require("../controllers/plan_controller.php");
 
                     <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item"><?php echo $message;?></li>
 
                     <li class="header-get-a-quote">
                       <a class="btn btn-primary" href="plan.php">Get Your Building Plans</a>

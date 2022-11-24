@@ -24,32 +24,35 @@
                 <h6>Welcome To Darkus Architectural Services</h6>
               </div>
               <p class="login-card-description">Sign Up</p>
-              <form action="#!">
+              <form action="../actions/registerprocess.php" method="POST">
                   <div class="form-group">
                     <label for="text" class="sr-only">First Name</label>
-                    <input type="text" name="text" id="text" class="form-control" placeholder="First Name">
+                    <input type="text" name="fullname" id="text" class="form-control" placeholder="First Name" required>
                   </div>
                   <div class="form-group">
                     <label for="text" class="sr-only">Last Name</label>
-                    <input type="text" name="text" id="text" class="form-control" placeholder="Last Name">
+                    <input type="text" name="lastname" id="text" class="form-control" placeholder="Last Name" required>
                   </div>
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required>
                   </div>
                   <div class="form-group">
                     <label for="contact" class="sr-only">Contact</label>
-                    <input type="text" name="contact" id="contact" class="form-control" placeholder="Contact">
+                    <input type="tel" name="contact" id="contact" class="form-control" placeholder="Contact" required>
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password"                 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
+                      title="Must contain at least one number and one uppercase 
+                      and lowercase letter, and at least 6 or more characters" required>
                   </div>
-                  <div class="form-group mb-4">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Confirm Password">
-                  </div>
-                  <input name="signup" id="signup" class="btn btn-block login-btn mb-4" type="button" value="Signup">
+                  <!-- <div class="form-group mb-4">
+                    <label for="password" class="sr-only">Confirm Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Confirm Password" required>
+                  </div> -->
+                  <button name="submit" id="button" class="btn btn-block login-btn mb-4"> Register </button>
                 </form>
                 <p class="login-card-footer-text">You have an account? <a href="login.php" class="text-reset">Sign In here</a></p>
                 <nav class="login-card-footer-nav">
