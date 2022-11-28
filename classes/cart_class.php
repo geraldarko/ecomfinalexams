@@ -27,8 +27,8 @@ class cart_class extends db_connection
 	
 	//select
 	function select_cart($c_id){
-		$sql =" SELECT products.product_id, products.product_title, products.product_price, products.product_desc, products.product_image, cart.qty 
-		FROM cart INNER JOIN products ON cart.p_id = products.product_id WHERE cart.c_id = $c_id";
+		$sql =" SELECT plan.plan_id, plan.plan_title, plan.plan_price, plan.plan_desc, plan.plan_image, cart.qty 
+		FROM cart INNER JOIN plan ON cart.p_id = plan.plan_id WHERE cart.c_id = $c_id";
 	
 		return $this -> db_fetch_all($sql);
 	}
@@ -84,14 +84,14 @@ function update_textbox($pid, $cid, $txtbox){
 }
 
 function every_cart_item($cid){
-	$sql = "SELECT products.product_price * cart.qty, cart.qty, products.product_id, products.product_title, products.product_desc, products.product_image, products.product_price 
-	FROM cart INNER JOIN products ON cart.p_id = products.product_id WHERE cart.c_id = '$cid'";
+	$sql = "SELECT plan.plan_price * cart.qty, cart.qty, plan.plan_id, plan.plan_title, plan.plan_desc, plan.plan_image, plan.plan_price 
+	FROM cart INNER JOIN plan ON cart.p_id = plan.plan_id WHERE cart.c_id = '$cid'";
 	return $this -> db_fetch_all($sql);
 }
 
 function total_price($cid){
-	$sql = "SELECT SUM(cart.qty * products.product_price) FROM cart 
-	INNER JOIN products ON cart.p_id = products.product_id WHERE cart.c_id = '$cid'";
+	$sql = "SELECT SUM(cart.qty * plan.plan_price) FROM cart 
+	INNER JOIN plan ON cart.p_id = plan.plan_id WHERE cart.c_id = '$cid'";
 	return $this -> db_fetch_one($sql);
 }
 
@@ -139,11 +139,18 @@ function insert_order_details($oid, $pid, $qty){
 	return $this -> db_query($sql);
 }
 
-function delete_from_cart($cid){
-	$sql = "DELETE FROM cart WHERE c_id = '$cid' ";
+function delete_from_cart($cid,$pid){
+	$sql = "DELETE FROM cart WHERE c_id = '$cid' and p_id = '$pid' ";
 
 	return $this -> db_query($sql);
 }
+
+function delete_all_from_cart($cid){
+	$sql = "DELETE FROM cart WHERE c_id = '$cid'";
+
+	return $this -> db_query($sql);
+}
+
 
 }
 

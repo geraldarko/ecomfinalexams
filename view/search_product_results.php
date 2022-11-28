@@ -19,7 +19,20 @@ TWITTER: https://twitter.com/themefisher
 FACEBOOK: https://www.facebook.com/themefisher
 -->
 
-<?php require("../controllers/plan_controller.php");
+<?php 
+
+session_start();
+$message = "<a class='nav-link' href='login.php'>Login</a>";
+if (isset($_SESSION['loggedin'])) {
+  $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
+}
+
+$cartcheck = "<a class='nav-link' href='login.php'>Cart</a>";
+if (isset($_SESSION['loggedin'])){
+  $cartcheck = "<a class='nav-link' href='cart.php'>Cart</a>";
+}
+
+require("../controllers/plan_controller.php");
 
 
 ?>
@@ -151,9 +164,9 @@ FACEBOOK: https://www.facebook.com/themefisher
 
                     <li class="nav-item"><a class="nav-link" href="plan.php">Plans</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
+                    <li class="nav-item"><?php echo $cartcheck;?></li>
 
-                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                    <li class="nav-item"><?php echo $message;?></li>
 
                     <li class="header-get-a-quote">
                       <a class="btn btn-primary" href="plan.php">Get Your Building Plans</a>
@@ -189,9 +202,14 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <!-- <label class="form-label" for="form1">Search</label> -->
               </div>
               <br>
+              <form>
+                
+              </form>
+              <form>
               <button type="submit" name="search" class="btn btn-primary">
                 <i class="fas fa-search"></i>
               </button>
+              </form>
             </div>
 
           </div>
@@ -211,6 +229,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           foreach ($product_search as $product_one) {
             $product_id = $product_one['plan_id'];
             $product_name = $product_one['plan_title'];
+          
           ?>
 
             <div class="col-md-4">

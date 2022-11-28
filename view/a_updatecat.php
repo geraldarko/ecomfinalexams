@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 }
 
 include("../controllers/plan_controller.php");
-include("../settings/core.php");
+// include("../settings/core.php");
 
 
 $cid = $_GET['cid'];

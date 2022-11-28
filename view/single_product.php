@@ -20,7 +20,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 -->
 <?php 
 session_start();
-$message = "<a class='nav-link' href='view/login.php'>Login</a>";
+$message = "<a class='nav-link' href='login.php'>Login</a>";
 if (isset($_SESSION['loggedin'])){
   $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
 }
@@ -227,7 +227,10 @@ require("../controllers/plan_controller.php");
               </div>
 
               </div>
-              <a href="cart.php" class="btn btn-main mt-20">Add To Cart</a>
+
+              <br>
+              <br>
+              <a class="btn btn-primary" href="../actions/add_to_cart.php?id=<?php echo $product_one['plan_id'];?>"> Add To Cart </a>
             </div>
           </div>
         </div>

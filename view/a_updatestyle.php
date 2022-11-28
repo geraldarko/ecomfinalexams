@@ -7,11 +7,12 @@ session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1){
     header("location: ../index.php");
     exit;
+    
 }
 
 
 include("../controllers/plan_controller.php");
-include("../settings/core.php");
+// include("../settings/core.php");
 
 
 $sid = $_GET['sid'];

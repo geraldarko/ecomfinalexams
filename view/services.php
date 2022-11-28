@@ -21,9 +21,14 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 <?php
 session_start();
-$message = "<a class='nav-link' href='view/login.php'>Login</a>";
+$message = "<a class='nav-link' href='login.php'>Login</a>";
 if (isset($_SESSION['loggedin'])){
   $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
+}
+
+$cartcheck = "<a class='nav-link' href='login.php'>Cart</a>";
+if (isset($_SESSION['loggedin'])){
+  $cartcheck = "<a class='nav-link' href='cart.php'>Cart</a>";
 }
 
 ?>
@@ -145,7 +150,7 @@ if (isset($_SESSION['loggedin'])){
 
                           <li class="nav-item"><a class="nav-link" href="plan.php">Plans</a></li>
 
-                          <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
+                          <li class="nav-item"><?php echo $cartcheck;?></li>
               
                           <li class="nav-item"><?php echo $message;?></li>
     

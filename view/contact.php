@@ -21,9 +21,14 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 <?php
 session_start();
-$message = "<a class='nav-link' href='view/login.php'>Login</a>";
+$message = "<a class='nav-link' href='login.php'>Login</a>";
 if (isset($_SESSION['loggedin'])){
   $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
+}
+
+$cartcheck = "<a class='nav-link' href='login.php'>Cart</a>";
+if (isset($_SESSION['loggedin'])){
+  $cartcheck = "<a class='nav-link' href='cart.php'>Cart</a>";
 }
 
 ?>
@@ -144,7 +149,7 @@ if (isset($_SESSION['loggedin'])){
 
                       <li class="nav-item"><a class="nav-link" href="plan.php">Plans</a></li>
 
-                      <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
+                      <li class="nav-item"><?php echo $cartcheck;?></li>
                       
                       <li class="nav-item"><?php echo $message;?></li>
 
@@ -244,46 +249,7 @@ if (isset($_SESSION['loggedin'])){
 
     <div class="gap-40"></div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="column-title">We love to hear</h3>
-        <!-- contact form works with formspree.io  -->
-        <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
-        <form id="contact-form" action="#" method="post" role="form">
-          <div class="error-container"></div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Name</label>
-                <input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Email</label>
-                <input class="form-control form-control-email" name="email" id="email" placeholder="" type="email"
-                  required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Subject</label>
-                <input class="form-control form-control-subject" name="subject" id="subject" placeholder="" required>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea class="form-control form-control-message" name="message" id="message" placeholder="" rows="10"
-              required></textarea>
-          </div>
-          <div class="text-right"><br>
-            <button class="btn btn-primary solid blank" type="submit">Send Message</button>
-          </div>
-        </form>
-      </div>
-
-    </div><!-- Content row -->
+   
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 

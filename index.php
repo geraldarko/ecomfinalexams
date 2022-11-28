@@ -25,6 +25,10 @@ if (isset($_SESSION['loggedin'])){
   $message = "<a class='nav-link' href='actions/logout.php'>Logout</a>";
 }
 
+$cartcheck = "<a class='nav-link' href='view/login.php'>Cart</a>";
+if (isset($_SESSION['loggedin'])){
+  $cartcheck = "<a class='nav-link' href='view/cart.php'>Cart</a>";
+}
 ?>
 
 
@@ -143,11 +147,9 @@ if (isset($_SESSION['loggedin'])){
 
                       <li class="nav-item"><a class="nav-link" href="view/plan.php">Plans</a></li>
 
+                      <li class="nav-item"><?php echo $cartcheck;?></li>
 
-                      <li class="nav-item"><a class="nav-link" href="view/cart.php">Cart</a></li>
-
-
-                     <li class="nav-item"><?php echo $message;?></li>
+                      <li class="nav-item"><?php echo $message;?></li>
 
                       <li class="header-get-a-quote">
                           <a class="btn btn-primary" href="view/plan.php">Get Your Building Plans</a>
@@ -506,15 +508,15 @@ if (isset($_SESSION['loggedin'])){
         <div class="col-lg-8">
           <div class="ts-newsletter row align-items-center">
               <div class="col-md-5 newsletter-introtext">
-                <h4 class="text-white mb-0">Newsletter Sign-up</h4>
-                <p class="text-white">Latest updates and news</p>
+                <h4 class="text-white mb-0">Email Us</h4>
+                <p class="text-white">Customise your plans with us</p>
               </div>
 
               <div class="col-md-7 newsletter-form">
                 <form action="#" method="post">
                     <div class="form-group">
                       <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
-                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">
+                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="darkusarchservices@gmail.com" readonly>
                     </div>
                 </form>
               </div>

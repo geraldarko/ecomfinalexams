@@ -2,12 +2,14 @@
 
 // Initialize the session
 session_start();
- 
+
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1){
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1) {
     header("location: ../index.php");
     exit;
 }
+
+require("../controllers/customer_controller.php");
 
 ?>
 
@@ -40,8 +42,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
                 <a class="navbar-brand" href="a_dashboard.php">
                     <h1 class="tm-site-title mb-0">Administrator</h1>
                 </a>
-                <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars tm-nav-icon"></i>
                 </button>
 
@@ -91,49 +92,54 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
             </div>
 
         </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p class="text-white mt-5 mb-5">Welcome back, <b>Admin</b></p>
-                </div>
-            </div>
-                <div class="col-12 tm-block-col">
-                    <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-                        <h2 class="tm-block-title">Sales List</h2>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">CUSTOMER NAME</th>
-                                    <th scope="col">CATEGORY</th>
-                                    <th scope="col">STYLE</th>
-                                    <th scope="col">PLAN TITLE</th>
-                                    <th scope="col">DESCRIPTION</th>
-                                    <th scope="col">PRICE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><b>Gerald Darko</b></th>
-                                    <td>School</td>
-                                    <td><b>American</b></td>
-                                    <td><b>Semi-Detached</b></td>
-                                    <td><b>5 Story building</b></td>
-                                    <td>$49</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- <?php
+
+        $customerlist = select_user_ctrl();
+        foreach ($customerlist as $showcustomer) :
+        ?>
+            <h1>
+                <center>
+                    <p class="text-white mt-5 mb-5">Welcome back, <?php echo $showcustomer['customer_firstname']?>
+                    <?php echo $showcustomer['customer_lastname'] ?>
+                    </p>
+                </center>
+            </h1>
+
+
+
+        <?php
+        endforeach;
+        ?> -->
+
+<center><h1><p class="text-white mt-5 mb-5">Welcome back, Admin </p><h1></center>
+        <br>
+        <br> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
     </div>
     <br><br>
     <footer class="tm-footer row tm-mt-small">
         <div class="col-12 font-weight-light">
-          <p class="text-center text-white mb-0 px-4 small">
-            Copyright &copy; <b>2022</b> All rights reserved. 
-            Darkus Architectural Services<a rel="nofollow noopener" href="" class="tm-footer-link"></a>
-          </p>
+            <p class="text-center text-white mb-0 px-4 small">
+                Copyright &copy; <b>2022</b> All rights reserved.
+                Darkus Architectural Services<a rel="nofollow noopener" href="" class="tm-footer-link"></a>
+            </p>
         </div>
     </footer>
 

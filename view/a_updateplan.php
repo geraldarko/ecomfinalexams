@@ -11,7 +11,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 
 
 require("../controllers/plan_controller.php");
-include("../settings/core.php");
 
 $pid = $_GET['id'];
 

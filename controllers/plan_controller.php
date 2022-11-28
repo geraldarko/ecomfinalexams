@@ -200,3 +200,79 @@ function delete_plan_ctr($plan_id)
   return $del->delete_plan_cls($plan_id);
 }
 
+
+
+// CART
+function add_cart_ctrl($p_id, $ip_add, $c_id){
+
+  //creating an instance
+  $add_cart = new plan_class();
+
+  // return method
+  return $add_cart -> insert_cart($p_id, $ip_add, $c_id);
+}
+
+function select_cart_ctrl(){
+
+  //creating an instance
+  $select_cart = new plan_class();
+
+  // return method
+  return $select_cart -> select_cart();
+}
+
+// count cart
+function count_cart_ctrl($cid){
+
+  $count_cart = new plan_class();
+
+  return $count_cart -> count_cart($cid);
+}
+
+// count one cart item
+function count_one_cart_ctrl($cid){
+
+  $count_one_cart = new plan_class();
+
+  return $count_one_cart -> count_one_cart($cid);
+}
+
+function duplicate_cart_ctrl($pid, $cid){
+
+  $duplicate_cart = new plan_class();
+
+  return $duplicate_cart -> duplicate_cart($pid, $cid);
+}
+
+function duplicate_one_cart_ctrl($pid, $cid){
+
+  $duplicate_one_cart = new plan_class();
+
+  return $duplicate_one_cart -> duplicate_one_cart($pid, $cid);
+}
+
+function update_cart_qty_ctrl($pid, $cid){
+  $update_cart = new plan_class();
+  return $update_cart -> update_cart_qty($pid, $cid);
+}
+
+function update_more_cart_qty_ctrl ($pid, $cid){
+  $update_more_cart = new plan_class();
+  return $update_more_cart -> update_more_cart_qty($pid, $cid);
+}
+
+  // 
+function delete_cart_qty_ctrl($pid, $cid){
+  $delete_cart = new plan_class();
+  return $delete_cart -> delete_cart_qty($pid, $cid);
+}
+
+function update_textbox_ctrl($pid, $cid, $txtbox){
+  $update_textbox = new plan_class();
+  return $update_textbox -> update_textbox($pid, $cid, $txtbox);
+}
+
+
+
+?>
+

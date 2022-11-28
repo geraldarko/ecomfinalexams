@@ -2,11 +2,11 @@
 
 // Initialize the session
 session_start();
- 
+
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1){
-    header("location: ../index.php");
-    exit;
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION['role'] != 1) {
+  header("location: ../index.php");
+  exit;
 }
 
 
@@ -89,24 +89,35 @@ require("../controllers/customer_controller.php");
         </div>
       </div>
     </nav>
-    <div class="tm-product-table-container">
-      <table class="table table-hover tm-table-small tm-product-table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">FIRST NAME</th>
-            <th scope="col">LAST NAME</th>
-            <th scope="col">EMAIL</th>
-            <th scope="col">CONTACT</th>
-            <th scope="col">&nbsp;</th>
-          </tr>
-        </thead>
 
-        <tr>
-          <?php
-          $customerlist = select_user_ctrl();
-          foreach ($customerlist as $showcustomer) :
-          ?>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+        </div>
+      </div>
+      <div class="col-12 tm-block-col">
+        <br>
+        <div class="tm-bg-primary-dark">
+          <br>
+         <center> <h2 class="tm-block-title">Users Account Details</h2></center>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">FIRST NAME</th>
+                <th scope="col">LAST NAME</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">CONTACT</th>
+                <th scope="col">&nbsp;</th>
+              </tr>
+            </thead>
+            </thead>
+            <tbody>
+              <tr>
+                <?php
+                $customerlist = select_user_ctrl();
+                foreach ($customerlist as $showcustomer) :
+                ?>
 
             <tbody>
 
@@ -126,12 +137,21 @@ require("../controllers/customer_controller.php");
               </td> -->
 
             <?php
-          endforeach;
+                endforeach;
             ?>
-        </tr>
-        </tbody>
-      </table>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+  </div>
+
+
+
+  </tbody>
+  </table>
+  </div>
   </div>
   <br>
   <br>

@@ -22,13 +22,27 @@ FACEBOOK: https://www.facebook.com/themefisher
 <?php
 
 session_start();
-$message = "<a class='nav-link' href='view/login.php'>Login</a>";
-if (isset($_SESSION['loggedin'])){
+$message = "<a class='nav-link' href='login.php'>Login</a>";
+if (isset($_SESSION['loggedin'])) {
   $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
 }
 
+$cartcheck = "<a class='nav-link' href='login.php'>Cart</a>";
+if (isset($_SESSION['loggedin'])){
+  $cartcheck = "<a class='nav-link' href='cart.php'>Cart</a>";
+}
+
 require("../controllers/plan_controller.php");
+
+
 ?>
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -156,9 +170,9 @@ require("../controllers/plan_controller.php");
 
                     <li class="nav-item"><a class="nav-link" href="plan.php">Plans</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
+                    <li class="nav-item"><?php echo $cartcheck;?></li>
 
-                    <li class="nav-item"><?php echo $message;?></li>
+                    <li class="nav-item"><?php echo $message; ?></li>
 
                     <li class="header-get-a-quote">
                       <a class="btn btn-primary" href="plan.php">Get Your Building Plans</a>
@@ -188,20 +202,16 @@ require("../controllers/plan_controller.php");
               <div class="form-outline">
                 <form action="search_product_results.php" method="GET">
                   <input type="text" placeholder="Search for plans" name="search" id="search">
-
                 </form>
-
-                <!-- <label class="form-label" for="form1">Search</label> -->
               </div>
-              <br>
-              <button type="submit" name="search" class="btn btn-primary">
-                <i class="fas fa-search"></i>
-              </button>
+              <form>
+                <button type="submit" name="search" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
             </div>
           </div>
         </div>
-
-
 
         <div class="row">
 
@@ -232,10 +242,8 @@ require("../controllers/plan_controller.php");
                 </div>
               </div>
             </div>
-
-          <?php
-          endforeach;
-          ?>
+    
+          <?php endforeach; ?>
 
         </div>
       </div>
@@ -243,37 +251,37 @@ require("../controllers/plan_controller.php");
 
     <br>
     <section class="subscribe no-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="subscribe-call-to-acton">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="subscribe-call-to-acton">
               <h3>Can We Help?</h3>
               <h4>(+233) 244 417 579</h4>
-            </div>
-          </div><!-- Col end -->
+          </div>
+        </div><!-- Col end -->
 
-          <div class="col-lg-8">
-            <div class="ts-newsletter row align-items-center">
+        <div class="col-lg-8">
+          <div class="ts-newsletter row align-items-center">
               <div class="col-md-5 newsletter-introtext">
-                <h4 class="text-white mb-0">Newsletter Sign-up</h4>
-                <p class="text-white">Latest updates and news</p>
+                <h4 class="text-white mb-0">Email Us</h4>
+                <p class="text-white">Customise your plans with us</p>
               </div>
 
               <div class="col-md-7 newsletter-form">
                 <form action="#" method="post">
-                  <div class="form-group">
-                    <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
-                    <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">
-                  </div>
+                    <div class="form-group">
+                      <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
+                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="darkusarchservices@gmail.com" readonly>
+                    </div>
                 </form>
               </div>
-            </div><!-- Newsletter end -->
-          </div><!-- Col end -->
+          </div><!-- Newsletter end -->
+        </div><!-- Col end -->
 
-        </div><!-- Content row end -->
-      </div>
-      <!--/ Container end -->
-    </section>
+    </div><!-- Content row end -->
+  </div>
+  <!--/ Container end -->
+</section>
 
     <!--/ News end -->
 
