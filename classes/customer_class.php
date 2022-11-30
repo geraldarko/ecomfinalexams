@@ -42,6 +42,11 @@ class customerclass extends db_connection
 		return $prods;
 	}
 
+	function select_email($email) {
+		$sql = "SELECT customer_email FROM customer WHERE customer_email = '$email'";
+		return $this -> db_fetch_one($sql); 
+	}
+
 
 
 

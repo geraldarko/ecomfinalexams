@@ -1,3 +1,9 @@
+<?php 
+
+session_start(); 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +30,18 @@
                <h6>Welcome To Darkus Architectural Services</h6>
               </div>
               <p class="login-card-description">Sign into your account</p>
-              <form action="../actions/loginprocess.php" method="POST">
+              <form action="../actions/loginprocess.php" method="POST" eenctype="multipart/form-data" onsubmit="return validateForm(event);">
+              <?php 
+                  if(isset($_SESSION['errors'])){
+                    $errors = $_SESSION['errors'];
+                    foreach($errors as $error) {
+                      ?>
+                        <small style="color: red"><?=$error."<br>";?></small> 
+                      <?php 
+                    }
+                  }
+                  $_SESSION['errors'] = null; 
+                ?>
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" name="loginemail" id="email" class="form-control" placeholder="Email address">

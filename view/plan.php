@@ -22,6 +22,13 @@ FACEBOOK: https://www.facebook.com/themefisher
 <?php
 
 session_start();
+
+$loggedin = false; 
+
+if(isset($_SESSION['loggedin'])){
+  $loggedin = true;
+}
+
 $message = "<a class='nav-link' href='login.php'>Login</a>";
 if (isset($_SESSION['loggedin'])) {
   $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
@@ -33,6 +40,7 @@ if (isset($_SESSION['loggedin'])){
 }
 
 require("../controllers/plan_controller.php");
+
 
 
 ?>

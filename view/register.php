@@ -1,3 +1,7 @@
+<?php 
+
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +28,19 @@
                 <h6>Welcome To Darkus Architectural Services</h6>
               </div>
               <p class="login-card-description">Sign Up</p>
-              <form action="../actions/registerprocess.php" method="POST">
+              <form action="../actions/registerprocess.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm(event);">
+                <?php 
+                  if(isset($_SESSION['errors'])){
+                    $errors = $_SESSION['errors'];
+                    foreach($errors as $error) {
+                      ?>
+                        <small style="color: red"><?=$error."<br>";?></small> 
+                      <?php 
+                    }
+                  }
+                  $_SESSION['errors'] = null; 
+                ?>
+
                   <div class="form-group">
                     <label for="text" class="sr-only">First Name</label>
                     <input type="text" name="fullname" id="text" class="form-control" placeholder="First Name" required>
@@ -39,7 +55,7 @@
                   </div>
                   <div class="form-group">
                     <label for="contact" class="sr-only">Contact</label>
-                    <input type="tel" name="contact" id="contact" class="form-control" placeholder="Contact" required>
+                    <input type="text" name="contact" id="contact" class="form-control" placeholder="Contact" required>
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
@@ -47,6 +63,12 @@
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
                       title="Must contain at least one number and one uppercase 
                       and lowercase letter, and at least 6 or more characters" required>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label for="password" class="sr-only">Confirm Password</label>
+                    <input type="password" name="confirm_password" id="password" class="form-control" placeholder="Confirm Password"                 
+                    required>
                   </div>
                   <!-- <div class="form-group mb-4">
                     <label for="password" class="sr-only">Confirm Password</label>

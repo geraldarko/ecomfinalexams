@@ -78,5 +78,15 @@ function select_user_ctrl(){
   
 }
 
+function duplicate_email($email){
+
+  // creating instance
+  $user_email = new customerclass();
+
+  // return method
+  $data = $user_email -> select_email($email);
+  return $data;
+}
+
 
 ?>
