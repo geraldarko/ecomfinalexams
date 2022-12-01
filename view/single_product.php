@@ -90,7 +90,7 @@ require("../controllers/plan_controller.php");
           </div>
           <!--/ Top info end -->
 
-          <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+          <!-- <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
             <ul class="list-unstyled">
               <li>
                 <a title="Facebook" href="https://facebbok.com/themefisher.com">
@@ -107,7 +107,7 @@ require("../controllers/plan_controller.php");
                 </a>
               </li>
             </ul>
-          </div>
+          </div> -->
           <!--/ Top social end -->
         </div>
         <!--/ Content row end -->
@@ -251,7 +251,7 @@ require("../controllers/plan_controller.php");
               <!-- <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra"> -->
               <p>Darkus Architecture Service provides services that include concept design development, preparation of
                 construction documents and construction administration</p>
-              <div class="footer-social">
+              <!-- <div class="footer-social">
                 <ul>
                   <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
                         class="fab fa-facebook-f"></i></a></li>
@@ -262,7 +262,7 @@ require("../controllers/plan_controller.php");
                   <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a>
                   </li>
                 </ul>
-              </div><!-- Footer social end -->
+              </div>Footer social end -->
             </div><!-- Col end -->
 
             <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">

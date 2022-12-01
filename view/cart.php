@@ -112,7 +112,7 @@ $total_price = total_price_ctrl($cid);
           </div>
           <!--/ Top info end -->
 
-          <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+          <!-- <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
             <ul class="list-unstyled">
               <li>
                 <a title="Facebook" href="https://facebbok.com/themefisher.com">
@@ -129,7 +129,7 @@ $total_price = total_price_ctrl($cid);
                 </a>
               </li>
             </ul>
-          </div>
+          </div> -->
           <!--/ Top social end -->
         </div>
         <!--/ Content row end -->
@@ -216,7 +216,7 @@ $total_price = total_price_ctrl($cid);
                         <thead>
                           <tr>
                             <th class="">Plan Name</th>
-                            <th class="">Plan Price</th>
+                            <th class="">Price</th>
                             <th class="">Actions</th>
                           </tr>
                         </thead>
@@ -246,7 +246,7 @@ $total_price = total_price_ctrl($cid);
                           <tr class="">
                             <td class="">
                               <div class="product-info">
-                                <img src="<?php echo $cart_one['plan_image'] ?>" alt="" height=80 width="40%" />
+                                <img src="<?php echo $cart_one['plan_image'] ?>" alt="" height=100% width="40%" />
                                 <a href="#!"><?php echo $cart_one['plan_title'] ?></a>
                               </div>
                             </td>
@@ -256,7 +256,7 @@ $total_price = total_price_ctrl($cid);
                               <form action="../actions/remove_from_cart.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $cart_one['plan_id'] ?>">
                                 <br>
-                                <button type="submit" name="deleteProduct"><b>Delete</b></button>
+                                <button type="submit" class="btn btn-primary" name="deleteProduct"><b>Delete</b></button>
                               </form>
 
                             <?php } ?>
@@ -303,7 +303,7 @@ $total_price = total_price_ctrl($cid);
               <h3 class="widget-title">About Us</h3>
               <!-- <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra"> -->
               <p>Darkus Architecture Service provides services that include concept design development, preparation of construction documents and construction administration</p>
-              <div class="footer-social">
+              <!-- <div class="footer-social">
                 <ul>
                   <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                   <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -311,7 +311,7 @@ $total_price = total_price_ctrl($cid);
                   <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                   <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
                 </ul>
-              </div><!-- Footer social end -->
+              </div>Footer social end -->
             </div><!-- Col end -->
 
             <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">

@@ -210,7 +210,7 @@ $c_email = user_email_ctrl($c_id);
                                             <thead>
                                                 <tr>
                                                     <th class="">Plan Name</th>
-                                                    <th class="">Plan Price</th>
+                                                    <th class="">Price</th>
                                                 </tr>
                                             </thead>
 
@@ -239,7 +239,7 @@ $c_email = user_email_ctrl($c_id);
                                                     <tr class="">
                                                         <td class="">
                                                             <div class="product-info">
-                                                                <img src="<?php echo $cart_one['plan_image'] ?>" alt="" height=80 width="40%" />
+                                                                <img src="<?php echo $cart_one['plan_image'] ?>" alt="" height=100% width="40%" />
                                                                 <a href="#!"><?php echo $cart_one['plan_title'] ?></a>
                                                             </div>
                                                         </td>
@@ -344,7 +344,7 @@ paymentForm.addEventListener("submit", payWithPaystack, false); */
                             cache: false,
                             success: function(result) {
                                 // alert(result);
-                                window.location = "../index.php";
+                                window.location = "paymentsuccess.php";
                                 // window.location = "pay"
                             }
                         });

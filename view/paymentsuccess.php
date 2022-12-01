@@ -200,96 +200,53 @@ require("../controllers/plan_controller.php");
     </header>
     <!--/ Header end -->
 
-
-    <section class="products section bg-gray">
-      <div class="container">
-        <div class="row">
-          <div class="title text-center">
-            <h2>Welcome To Our Masterpiece Plans</h2>
-            <div class="input-group">
-              <div class="form-outline">
-                <form action="search_product_results.php" method="GET">
-                  <input type="text" placeholder="Search for plans" name="search" id="search">
-                </form>
-              </div>
-              <form>
-                <button type="submit" name="search" class="btn btn-primary">
-                  <i class="fas fa-search"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-
-          <?php
-          $productlist = select_all_product_ctrl();
-          foreach ($productlist as $showproduct) :
-          ?>
-
-            <div class="col-md-4">
-              <div class="product-item">
-                <div class="product-thumb">
-                  <!-- <span class="bage">Sale</span> -->
-                  <img class="img-responsive" src="<?php echo $showproduct['plan_image'] ?>" alt="product-img" />
-                  <div class="preview-meta">
-                    <ul>
-                      <li>
-                        <a href="single_product.php?id=<?php echo $showproduct['plan_id']; ?>"><i class="tf-ion-ios-eye"></i></a>
-                      </li>
-                      <li>
-                        <a href="../actions/add_to_cart.php?id=<?php echo $showproduct['plan_id']; ?>"><i class="tf-ion-android-cart"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="product-content">
-                  <h4><?php echo $showproduct['plan_title'] ?></h4>
-                  <p class="price">GH₵ <?php echo $showproduct['plan_price'] ?></p>
-                </div>
-              </div>
-            </div>
-    
-          <?php endforeach; ?>
-
-        </div>
-      </div>
-    </section>
-
+    <style>
+      body {
+        background: #EBF0F5;
+      }
+        h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        
+      icon {
+        color: #9ABC66;
+        font-size: 100px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      .cards {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        margin: 0 auto;
+      }
+    </style>
     <br>
-    <section class="subscribe no-padding">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-4">
-          <div class="subscribe-call-to-acton">
-              <h3>Can We Help?</h3>
-              <h4>(+233) 244 417 579</h4>
-          </div>
-        </div><!-- Col end -->
+    <br>
+    <body>
+      <center>
 
-        <div class="col-lg-8">
-          <div class="ts-newsletter row align-items-center">
-              <div class="col-md-5 newsletter-introtext">
-                <h4 class="text-white mb-0">Email Us</h4>
-                <p class="text-white">Customise your plans with us</p>
-              </div>
+  
+      <div class="cards">
+      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+        <icon class="checkmark">✓</i>
+      </div>
+        <h1>Success</h1> 
+        <p2>We received your purchase request;<br/> we will email you soon with the rest of the plan!</p>
+      </div>
+      </center>
+        
+    </body>
+      <br>
+      <br>
 
-              <div class="col-md-7 newsletter-form">
-                <form action="#" method="post">
-                    <div class="form-group">
-                      <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
-                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="darkusarchservices@gmail.com" readonly>
-                    </div>
-                </form>
-              </div>
-          </div><!-- Newsletter end -->
-        </div><!-- Col end -->
-
-    </div><!-- Content row end -->
-  </div>
-  <!--/ Container end -->
-</section>
+      <br>
 
     <!--/ News end -->
 

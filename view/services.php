@@ -86,7 +86,7 @@ if (isset($_SESSION['loggedin'])){
               </div>
               <!--/ Top info end -->
   
-              <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+              <!-- <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
                 <ul class="list-unstyled">
                     <li>
                       <a title="Facebook" href="https://facebbok.com/themefisher.com">
@@ -103,7 +103,7 @@ if (isset($_SESSION['loggedin'])){
                       </a>
                     </li>
                 </ul>
-              </div>
+              </div> -->
               <!--/ Top social end -->
           </div>
           <!--/ Content row end -->
@@ -258,7 +258,7 @@ if (isset($_SESSION['loggedin'])){
           <h3 class="widget-title">About Us</h3>
           <!-- <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra"> -->
           <p>Darkus Architecture Service provides services that include concept design development, preparation of construction documents and construction administration</p>
-          <div class="footer-social">
+          <!-- <div class="footer-social">
             <ul>
               <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
                     class="fab fa-facebook-f"></i></a></li>
@@ -268,7 +268,7 @@ if (isset($_SESSION['loggedin'])){
                     class="fab fa-instagram"></i></a></li>
               <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
             </ul>
-          </div><!-- Footer social end -->
+          </div>Footer social end -->
         </div><!-- Col end -->
 
         <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">

@@ -16,21 +16,18 @@ if (isset($_POST["submit"])) {
     if(empty($fname)){
         array_push($errors, "Enter first name");
     }
-
+    
     if(empty($lname)){
         array_push($errors, "Enter last name");
     }
-
 
     if(empty($email)){
         array_push($errors, "Enter Email");
     }
 
-
     if(empty($password)){
-        array_push($errors, "Enter first name");
+        array_push($errors, "Enter passowrd");
     }
-
 
     if(empty($contact)){
         array_push($errors, "Enter a valid contact");

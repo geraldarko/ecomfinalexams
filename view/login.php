@@ -44,11 +44,11 @@ session_start();
                 ?>
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="loginemail" id="email" class="form-control" placeholder="Email address">
+                    <input type="email" name="loginemail" id="email" class="form-control" placeholder="Email address" required>
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="loginpassword" id="password" class="form-control" placeholder="Enter Password">
+                    <input type="password" name="loginpassword" id="password" class="form-control" placeholder="Enter Password" required>
                   </div>
                   <button name="submit" id="button" class="btn btn-block login-btn mb-4"> Login </button>
                 </form>
