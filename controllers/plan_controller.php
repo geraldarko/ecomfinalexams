@@ -1,6 +1,6 @@
 <?php
 //connect to the user account class
-include("../classes/plan_class.php");
+include_once("../classes/plan_class.php");
 
 //sanitize data
 function cleanText($data) 

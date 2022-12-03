@@ -150,7 +150,32 @@ function delete_all_from_cart($cid){
   $delete_from_cart = new cart_class;
 
   return $delete_from_cart -> delete_all_from_cart($cid);
-
 }
+
+  function select_orders_ctr(){
+    $select_orders = new cart_class;
+  
+    return $select_orders-> select_orders();
+  
+  }
+
+  function select_orderdetail_ctr(){
+    $select_orders = new cart_class;
+  
+    return $select_orders-> select_orderdetail();
+  
+  }
+
+//selecting one product
+  function select_one_orderdetail($order_id){
+
+  // creating instance
+  $select_details = new cart_class();
+
+  // return method
+  $data = $select_details -> select_one_orderdetail($order_id);
+    return $data;
+}
+
 
 ?>

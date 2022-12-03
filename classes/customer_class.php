@@ -3,8 +3,8 @@
 require_once("../settings/db_class.php");
 
 /**
-*Customer class to handle all customer functions 
-*/
+ *Customer class to handle all customer functions 
+ */
 /**
  *@author Gerald Darko
  *
@@ -22,29 +22,42 @@ class customerclass extends db_connection
 	}
 
 	//--SELECT--//
-	function logincustomer($cus_email){
+	function logincustomer($cus_email)
+	{
 
 		$sql = "SELECT * FROM `customer` WHERE `customer_email` = '$cus_email'";
 
-		return $this -> db_fetch_one($sql);
+		return $this->db_fetch_one($sql);
 	}
 
-	function user_email($c_id){
+	function user_email($c_id)
+	{
 		$sql = "SELECT customer_email FROM customer WHERE customer_id = '$c_id'";
 
-		return $this -> db_fetch_one($sql);
+		return $this->db_fetch_one($sql);
 	}
 
-	function select_user(){
-		$sql ="SELECT * FROM `customer`";
 
-		$prods = $this -> db_fetch_all($sql);
+
+	function select_one_user($c_id)
+	{
+		$sql = "SELECT * FROM customer WHERE customer_id = '$c_id'";
+
+		return $this->db_fetch_one($sql);
+	}
+
+	function select_user()
+	{
+		$sql = "SELECT * FROM `customer`";
+
+		$prods = $this->db_fetch_all($sql);
 		return $prods;
 	}
 
-	function select_email($email) {
+	function select_email($email)
+	{
 		$sql = "SELECT customer_email FROM customer WHERE customer_email = '$email'";
-		return $this -> db_fetch_one($sql); 
+		return $this->db_fetch_one($sql);
 	}
 
 
@@ -55,8 +68,6 @@ class customerclass extends db_connection
 
 
 	//--DELETE--//
-	
+
 
 }
-
-?>

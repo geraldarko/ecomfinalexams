@@ -9,13 +9,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION
     exit;
 }
 
-require("../controllers/customer_controller.php");
+require_once("../controllers/customer_controller.php");
+
+require_once("../controllers/cart_controller.php");
+
+
+
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -57,19 +63,19 @@ require("../controllers/customer_controller.php");
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="a_addcategories.php">
-                                <i class="fa fa-square"></i>
+                                <i class="fas fa-shopping-cart"></i>
                                 Categories
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="a_addstyles.php">
-                                <i class="fa fa-map"></i>
+                                <i class="fas fa-shopping-cart"></i>
                                 Styles
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="a_plan.php">
-                                <i class="fa fa-home"></i>
+                                <i class="fas fa-shopping-cart"></i>
                                 Plans
                             </a>
                         </li>
@@ -92,46 +98,71 @@ require("../controllers/customer_controller.php");
             </div>
 
         </nav>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!-- <?php
-
-        $customerlist = select_user_ctrl();
-        foreach ($customerlist as $showcustomer) :
-        ?>
-            <h1>
-                <center>
-                    <p class="text-white mt-5 mb-5">Welcome back, <?php echo $showcustomer['customer_firstname']?>
-                    <?php echo $showcustomer['customer_lastname'] ?>
-                    </p>
-                </center>
-            </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="text-white mt-5 mb-5">Welcome back, <b>Admin</b></p>
+                </div>
+            </div>
 
 
 
-        <?php
-        endforeach;
-        ?> -->
+            <div class="col-12 tm-block-col">
+                <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+                    <h2 class="tm-block-title">Sales List</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"> FIRST NAME</th>
+                                <th scope="col"> LAST NAME</th>
+                                <th scope="col"> EMAIL</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">INVOICE NO</th>
+                                <!-- <th scope="col">PLAN TITLE</th> -->
+                            </tr>
+                        </thead>
 
-<center><h1><p class="text-white mt-5 mb-5">Welcome back, Admin </p><h1></center>
-        <br>
-        <br> 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
+                        <tbody>
+                            <?php
+
+                            $orderlist = select_orders_ctr();
+                            foreach ($orderlist as $showorder) :
+
+                                $c_id = $showorder['customer_id'];
+                                // $plan_id = $showproduct['plan_id'];
+                                $customer = select_one_user($c_id);
+                                // $product = select_product_ctrl($product_id);
+                                //foreach ($customerlist as $showcustomer) :
+
+                            ?>
+
+                            
+                            
+
+
+                                    <tr>
+                                        <th scope="row"><b><?php echo $customer['customer_firstname'] ?> </b></th>
+                                        <td class="tm-product-name"><?php echo $customer['customer_lastname'] ?></td>
+                                        <td><?php echo $customer['customer_email'] ?></td>
+                                        <td><?php echo $showorder['order_date'] ?></td>
+                                        <td><?php echo $showorder['invoice_no'] ?></td>
+                                        <!-- <td>$<?php echo $showdetails['plan_price'] ?></td> -->
+
+                                    </tr>
+                                <?php
+                                endforeach;
+                                ?>
+                        </tbody>
+                    </table>
+
+                    <?php
+                    // endforeach;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <br><br>
     <footer class="tm-footer row tm-mt-small">

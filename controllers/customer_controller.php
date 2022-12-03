@@ -1,7 +1,7 @@
 <?php
 //connect to the user account class
-include("../classes/customer_class.php");
-require("../functions/function.php");
+include_once("../classes/customer_class.php");
+require_once("../functions/function.php");
 
 
 
@@ -65,6 +65,15 @@ function user_email_ctrl($cid){
   // return method
   $data = $user_email -> user_email($cid);
     return $data;
+}
+
+function select_one_user($c_id){
+  $user_email = new customerclass();
+
+  // return method
+  $data = $user_email -> select_one_user($c_id);
+
+  return $data;
 }
 
 //selecting all product

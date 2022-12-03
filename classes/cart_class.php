@@ -151,6 +151,24 @@ function delete_all_from_cart($cid){
 	return $this -> db_query($sql);
 }
 
+function select_orders(){
+	$sql = "SELECT * from `orders`";
+	
+	return $this -> db_fetch_all($sql);
+}
+
+function select_orderdetail(){
+	$sql =" SELECT * FROM `orderdetails`";
+
+	return $this -> db_fetch_all($sql);
+}
+
+function select_one_orderdetail($order_id){
+	$sql =" SELECT * FROM `orderdetails` WHERE order_id = '$order_id'";
+
+	return $this -> db_fetch_one($sql);
+}
+
 
 }
 
