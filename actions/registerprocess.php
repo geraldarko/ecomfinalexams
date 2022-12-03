@@ -12,7 +12,8 @@ if (isset($_POST["submit"])) {
     $password = $_POST['password'];
     $confirm = $_POST['confirm_password'];
     $contact = $_POST['contact'];
-    $pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}";
+
+    $pattern= "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"; 
 
     if(empty($fname)){
         array_push($errors, "Enter first name");
