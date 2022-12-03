@@ -25,7 +25,7 @@ class customerclass extends db_connection
 	function logincustomer($cus_email)
 	{
 
-		$sql = "SELECT * FROM `customer` WHERE `customer_email` = '$cus_email'";
+		$sql = "SELECT * FROM customer WHERE customer_email = '$cus_email'";
 
 		return $this->db_fetch_one($sql);
 	}

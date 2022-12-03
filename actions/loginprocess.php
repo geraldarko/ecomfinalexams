@@ -29,8 +29,6 @@ if (isset($_POST["submit"])) {
     if (empty($errors)) {
         $logincheck = login_customer_ctrl($cus_email,$password);
 
-        echo $logincheck; 
-
         if ($logincheck){
             $results = logincustomer($cus_email);
             echo $results['user_role']; 
@@ -46,6 +44,11 @@ if (isset($_POST["submit"])) {
             header("Location: ../index.php");
             }
     
+        } else{
+            $errors = array();
+            array_push($errors, "Invalid Email or Password"); 
+            $_SESSION['errors'] = $errors;
+            header('location: ../view/login.php'); 
         }
 
 

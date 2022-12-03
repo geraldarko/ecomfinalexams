@@ -12,6 +12,7 @@ if (isset($_POST["submit"])) {
     $password = $_POST['password'];
     $confirm = $_POST['confirm_password'];
     $contact = $_POST['contact'];
+    $pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}";
 
     if(empty($fname)){
         array_push($errors, "Enter first name");
@@ -35,6 +36,11 @@ if (isset($_POST["submit"])) {
 
     if ($password != $confirm) {
         array_push($errors, "Passwords must match"); 
+    }
+
+    if (preg_match($pattern, $password) != 1) {
+        array_push($errors, "Password must contain at least one number and one uppercase 
+        and lowercase letter, and at least 6 or more characters"); 
     }
 
     if(strlen($contact) != 10){

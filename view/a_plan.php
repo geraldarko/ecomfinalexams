@@ -133,9 +133,9 @@ require("../controllers/plan_controller.php");
               <a href='../view/a_updateplan.php?id=<?php echo $showproduct['plan_id'];?>' class="tm-product-delete-link">
                 <i class="far fa-edit tm-product-delete-icon"></i>
               </a>
-              <a href="../actions/delete_plan.php?pid=<?php echo $showproduct['plan_id'];?>" class="tm-product-delete-link">
+              <!-- <a href="../actions/delete_plan.php?pid=<?php echo $showproduct['plan_id'];?>" class="tm-product-delete-link">
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
-              </a>
+              </a> -->
             </td>
 
           <?php

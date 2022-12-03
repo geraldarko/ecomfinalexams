@@ -145,9 +145,9 @@ require("../controllers/plan_controller.php");
                      <a href='./a_updatestyle.php?sid=<?php echo($sid);?>'class="tm-product-delete-link">
                             <i class="far fa-edit tm-product-delete-icon"></i>
                       </a>
-                      <a href="../actions/delete_style.php?sid=<?php echo($sid);?>" class="tm-product-delete-link">
+                      <!-- <a href="../actions/delete_style.php?sid=<?php echo($sid);?>" class="tm-product-delete-link">
                         <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                      </a>
+                      </a> -->
                       <?php
                   }?>
                     </td>

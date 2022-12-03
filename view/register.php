@@ -59,10 +59,7 @@ session_start();
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password"                 
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
-                      title="Must contain at least one number and one uppercase 
-                      and lowercase letter, and at least 6 or more characters" required>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" required>
                   </div>
 
                   <div class="form-group mb-4">

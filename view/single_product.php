@@ -20,12 +20,30 @@ FACEBOOK: https://www.facebook.com/themefisher
 -->
 <?php 
 session_start();
+
+require("../controllers/plan_controller.php");
+
+
 $message = "<a class='nav-link' href='login.php'>Login</a>";
 if (isset($_SESSION['loggedin'])){
   $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
 }
 
-require("../controllers/plan_controller.php");
+$pid = $_GET['id']; 
+$product_one = select_product_ctrl($pid);
+
+$product_id = $product_one['plan_id'];
+$product_name = $product_one['plan_title'];
+
+
+$addtocart = "<a class='btn btn-primary' href='login.php'> Add To Cart </a>";
+if (isset($_SESSION['loggedin'])){
+  $addtocart = "<a class='btn btn-primary' href='../actions/add_to_cart.php?id={$product_one['plan_id']}'> Add To Cart </a>";
+}
+
+
+
+
 
 ?>
 
@@ -230,7 +248,9 @@ require("../controllers/plan_controller.php");
 
               <br>
               <br>
-              <a class="btn btn-primary" href="../actions/add_to_cart.php?id=<?php echo $product_one['plan_id'];?>"> Add To Cart </a>
+
+             <?php echo $addtocart;?>
+              <!-- <a class="btn btn-primary" href="../actions/add_to_cart.php?id=<?php echo $product_one['plan_id'];?>"> Add To Cart </a> -->
             </div>
           </div>
         </div>

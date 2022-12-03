@@ -23,6 +23,8 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 session_start();
 
+require("../controllers/plan_controller.php");
+
 $loggedin = false; 
 
 if(isset($_SESSION['loggedin'])){
@@ -38,8 +40,6 @@ $cartcheck = "<a class='nav-link' href='login.php'>Cart</a>";
 if (isset($_SESSION['loggedin'])){
   $cartcheck = "<a class='nav-link' href='cart.php'>Cart</a>";
 }
-
-require("../controllers/plan_controller.php");
 
 
 
@@ -239,7 +239,9 @@ require("../controllers/plan_controller.php");
                         <a href="single_product.php?id=<?php echo $showproduct['plan_id']; ?>"><i class="tf-ion-ios-eye"></i></a>
                       </li>
                       <li>
-                        <a href="../actions/add_to_cart.php?id=<?php echo $showproduct['plan_id']; ?>"><i class="tf-ion-android-cart"></i></a>
+                        <?php 
+                          echo "<a href='../actions/add_to_cart.php?id={$showproduct['plan_id']}'><i class='tf-ion-android-cart'></i></a>"
+                        ?>
                       </li>
                     </ul>
                   </div>
