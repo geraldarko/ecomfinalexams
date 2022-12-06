@@ -31,25 +31,19 @@ if(isset($_SESSION['loggedin'])){
   $loggedin = true;
 }
 
+
 $message = "<a class='nav-link' href='login.php'>Login</a>";
 if (isset($_SESSION['loggedin'])) {
   $message = "<a class='nav-link' href='../actions/logout.php'>Logout</a>";
 }
 
+//Cart Button: check whether user is login or not
 $cartcheck = "<a class='nav-link' href='login.php'>Cart</a>";
 if (isset($_SESSION['loggedin'])){
   $cartcheck = "<a class='nav-link' href='cart.php'>Cart</a>";
 }
 
-
-
 ?>
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -111,27 +105,6 @@ if (isset($_SESSION['loggedin'])){
               </li>
             </ul>
           </div>
-          <!--/ Top info end -->
-
-          <!-- <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
-            <ul class="list-unstyled">
-              <li>
-                <a title="Facebook" href="https://facebbok.com/themefisher.com">
-                  <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-                </a>
-                <a title="Twitter" href="https://twitter.com/themefisher.com">
-                  <span class="social-icon"><i class="fab fa-twitter"></i></span>
-                </a>
-                <a title="Instagram" href="https://instagram.com/themefisher.com">
-                  <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                </a>
-                <a title="Linkdin" href="https://github.com/themefisher.com">
-                  <span class="social-icon"><i class="fab fa-github"></i></span>
-                </a>
-              </li>
-            </ul>
-          </div> -->
-          <!--/ Top social end -->
         </div>
         <!--/ Content row end -->
       </div>
@@ -223,32 +196,34 @@ if (isset($_SESSION['loggedin'])){
 
         <div class="row">
 
+
+          <!-- echo products from admin page -->
           <?php
-          $productlist = select_all_product_ctrl();
-          foreach ($productlist as $showproduct) :
+          $planlist = select_all_plan_ctrl();
+          foreach ($planlist as $showplan) :
           ?>
 
             <div class="col-md-4">
               <div class="product-item">
                 <div class="product-thumb">
                   <!-- <span class="bage">Sale</span> -->
-                  <img class="img-responsive" src="<?php echo $showproduct['plan_image'] ?>" alt="product-img" />
+                  <img class="img-responsive" src="<?php echo $showplan['plan_image'] ?>" alt="product-img" />
                   <div class="preview-meta">
                     <ul>
                       <li>
-                        <a href="single_product.php?id=<?php echo $showproduct['plan_id']; ?>"><i class="tf-ion-ios-eye"></i></a>
+                        <a href="single_product.php?id=<?php echo $showplan['plan_id']; ?>"><i class="tf-ion-ios-eye"></i></a>
                       </li>
                       <li>
                         <?php 
-                          echo "<a href='../actions/add_to_cart.php?id={$showproduct['plan_id']}'><i class='tf-ion-android-cart'></i></a>"
+                          echo "<a href='../actions/add_to_cart.php?id={$showplan['plan_id']}'><i class='tf-ion-android-cart'></i></a>"
                         ?>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div class="product-content">
-                  <h4><?php echo $showproduct['plan_title'] ?></h4>
-                  <p class="price">GH₵ <?php echo $showproduct['plan_price'] ?></p>
+                  <h4><?php echo $showplan['plan_title'] ?></h4>
+                  <p class="price">GH₵ <?php echo $showplan['plan_price'] ?></p>
                 </div>
               </div>
             </div>
@@ -303,15 +278,6 @@ if (isset($_SESSION['loggedin'])){
               <h3 class="widget-title">About Us</h3>
               <!-- <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra"> -->
               <p>Darkus Architecture Service provides services that include concept design development, preparation of construction documents and construction administration</p>
-              <!-- <div class="footer-social">
-                <ul>
-                  <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
-                </ul>
-              </div>Footer social end -->
             </div><!-- Col end -->
 
             <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">

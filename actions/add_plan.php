@@ -30,7 +30,8 @@ if(isset($_POST['add_product'])){
             echo "not working";
         }
     }else{
-        echo "Add Image";
+        echo "<script>alert('Add Image')</script>";
+        echo "<script>window.open('../view/a_addplan.php','_self')</script>";
     }
 
     //  $folder_path = file_upload("images", "product", $tmp, $pimage);

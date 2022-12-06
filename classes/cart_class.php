@@ -3,11 +3,7 @@
 require_once("../settings/db_class.php");
 
 /**
-*Product class to handle all product functions 
-*/
-/**
  *@author Gerald Darko
- *
  */
 
 class cart_class extends db_connection
@@ -163,7 +159,7 @@ function select_orderdetail(){
 	return $this -> db_fetch_all($sql);
 }
 
-function select_one_orderdetail($order_id){
+function selectorderdetail($order_id){
 	$sql =" SELECT * FROM `orderdetails` WHERE order_id = '$order_id'";
 
 	return $this -> db_fetch_one($sql);

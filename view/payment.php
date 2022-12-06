@@ -196,6 +196,10 @@ $c_email = user_email_ctrl($c_id);
         <!--/ Header end -->
 
         <center>
+
+            <br>
+            <br>
+            <br>
             <p> Total number of plans in the cart: <b><?php echo $count_cart[0]['SUM(qty)'] ?></b></p>
         </center>
         <center>
@@ -302,21 +306,14 @@ $c_email = user_email_ctrl($c_id);
 
 
 
-
-
-    <!-- <h3>Total Price: GHS <?php echo $total_price["SUM(cart.qty * plan.plan_price)"] ?>.00</h3>
-<button type="submit" onclick = "payWithPaystack()"><b>Proceed to Pay</b></button> -->
-
-
-
+   <!-- Payment Method -->
     <script>
-        /* const paymentForm = document.getElementById('paymentForm');
-paymentForm.addEventListener("submit", payWithPaystack, false); */
+   
         function payWithPaystack() {
             event.preventDefault();
             let handler = PaystackPop.setup({
 
-                key: 'pk_test_cd2cb86b81e77cbd080e656e1570a2702acf080e', // Replace with your public key
+                key: 'pk_live_bd5356607a881f3a0d6843b75d3172b74b9675cd', // Live Public Key
                 email: document.getElementById("email-address").value,
                 amount: document.getElementById("amount").value * 100,
                 currency: 'GHS',
@@ -334,8 +331,6 @@ paymentForm.addEventListener("submit", payWithPaystack, false); */
                     var dataString = 'email=' + email + '&amount=' + amount;
                     if (response.status == 'success') {
                         //alert("Please Fill All Fields");
-
-
 
                         $.ajax({
                             type: "POST",

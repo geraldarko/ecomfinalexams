@@ -30,7 +30,7 @@ if (isset($_SESSION['loggedin'])){
 }
 
 $pid = $_GET['id']; 
-$product_one = select_product_ctrl($pid);
+$product_one = select_plan_ctrl($pid);
 
 $product_id = $product_one['plan_id'];
 $product_name = $product_one['plan_title'];
@@ -202,7 +202,7 @@ if (isset($_SESSION['loggedin'])){
 
     <?php
              $pid = $_GET['id']; 
-              $product_one = select_product_ctrl($pid);
+              $product_one = select_plan_ctrl($pid);
 
             $product_id = $product_one['plan_id'];
             $product_name = $product_one['plan_title'];

@@ -3,11 +3,7 @@
 require_once("../settings/db_class.php");
 
 /**
- *Customer class to handle all customer functions 
- */
-/**
  *@author Gerald Darko
- *
  */
 
 class customerclass extends db_connection
@@ -59,15 +55,5 @@ class customerclass extends db_connection
 		$sql = "SELECT customer_email FROM customer WHERE customer_email = '$email'";
 		return $this->db_fetch_one($sql);
 	}
-
-
-
-
-	//--UPDATE--//
-
-
-
-	//--DELETE--//
-
 
 }

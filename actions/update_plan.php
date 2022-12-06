@@ -23,14 +23,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     // echo($pid);
 
     if(move_uploaded_file($tmp,$targetdir)){
-        $check_update = update_all_product_ctrl($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $targetdir, $pkey);
+        $check_update = update_all_plan_ctrl($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $targetdir, $pkey);
         if ($check_update) {
             header("Location: ../view/a_plan.php");
         }
+
         else{
-            return false;
+            echo "not working";
         }
-     }
+    }else{
+        echo "<script>alert('Fill all requirements to update')</script>";
+        echo "<script>window.open('../view/a_plan.php','_self')</script>";
+    }
+
 }
 
 

@@ -140,55 +140,55 @@ function add_product_ctrl($pcat, $pbrand, $ptitle, $pprice, $pdescr, $pimage, $p
 
 //SELECT
 //selecting all product
-function select_all_product_ctrl(){
+function select_all_plan_ctrl(){
 
   // creating instance
   $select_product = new plan_class();
 
   // return method
-  return $select_product -> select_product();
+  return $select_product -> select_plan();
   
 }
 
 //selecting all products
-function select_all_products_ctrl(){
+function select_all_plans_ctrl(){
 
   // creating instance
   $select_product = new plan_class();
 
   // return method
-  $data = $select_product -> select_product();
+  $data = $select_product -> select_plan();
     return $data;
 }
 
-function search_products_ctrl($a){
+function search_plans_ctrl($a){
 
   $search_product = new plan_class();
 
-  return $search_product -> search_products($a);
+  return $search_product -> search_plans($a);
 
 }
 
 //selecting one product
-function select_product_ctrl($product_id){
+function select_plan_ctrl($product_id){
 
   // creating instance
   $select_product = new plan_class();
 
   // return method
-  $data = $select_product -> select_one_product($product_id);
+  $data = $select_product -> select_one_plan($product_id);
     return $data;
 }
 
 //--UPDATE--//
 //update all product
-function update_all_product_ctrl($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $pimage, $pkey){
+function update_all_plan_ctrl($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $pimage, $pkey){
 
   //creating instance
   $update_category = new plan_class();
 
   // return method
-  return $update_category -> update_product_cls($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $pimage, $pkey);
+  return $update_category -> update_plan_cls($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $pimage, $pkey);
   
 }
 
@@ -250,29 +250,6 @@ function duplicate_one_cart_ctrl($pid, $cid){
 
   return $duplicate_one_cart -> duplicate_one_cart($pid, $cid);
 }
-
-function update_cart_qty_ctrl($pid, $cid){
-  $update_cart = new plan_class();
-  return $update_cart -> update_cart_qty($pid, $cid);
-}
-
-function update_more_cart_qty_ctrl ($pid, $cid){
-  $update_more_cart = new plan_class();
-  return $update_more_cart -> update_more_cart_qty($pid, $cid);
-}
-
-  // 
-function delete_cart_qty_ctrl($pid, $cid){
-  $delete_cart = new plan_class();
-  return $delete_cart -> delete_cart_qty($pid, $cid);
-}
-
-function update_textbox_ctrl($pid, $cid, $txtbox){
-  $update_textbox = new plan_class();
-  return $update_textbox -> update_textbox($pid, $cid, $txtbox);
-}
-
-
 
 ?>
 

@@ -202,6 +202,8 @@ $total_price = total_price_ctrl($cid);
     <br>
     <br>
     <br>
+
+    <!-- count number of items in cart  -->
   <center><p> Total number of plans in the cart: <b><?php echo $count_cart[0]['SUM(qty)'] ?></b></p>
 </center>  
     <center>
@@ -225,23 +227,19 @@ $total_price = total_price_ctrl($cid);
                         <tbody>
                            <?php
                           $cart_option = select_cart_ctrl($_SESSION['customer_id']);
-                          //print_r($cart_option);
 
-                          //if ($product_option) {
+        
                           foreach ($cart_option as $cart_one) {
-                            // print_r($cart_one);
+      
                             $product_name = $cart_one['plan_title'];
-                            // echo "$product_name";
+  
                             $product_price = $cart_one['plan_price'];
                             $product_desc = $cart_one['plan_desc'];
                             $product_image = $cart_one['plan_image'];
-
-                            //echo "<option value = $product_id>$product_name</option>";
                             if ($_SERVER['REQUEST_METHOD'] == "POST") {
                               $pid = $_POST['id'];
                             }
 
-                            //else {echo "<option value = 'not available'>product not found</option>";
                           ?>
                           <tr class="">
                             <td class="">
@@ -252,7 +250,6 @@ $total_price = total_price_ctrl($cid);
                             </td>
                             <td class="">¢<?php echo $cart_one['plan_price'] ?></td>
                             <td class="">
-                              <!-- <a class="product-remove" href="#!">Remove</a> -->
                               <form action="../actions/remove_from_cart.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $cart_one['plan_id'] ?>">
                                 <br>
@@ -269,7 +266,7 @@ $total_price = total_price_ctrl($cid);
                               <a href="#!">Total Price:</a>
                   </div>
                   </td>
-                  <td class="">GH¢ <?php echo $total_price["SUM(cart.qty * plan.plan_price)"] ?>.00</td>
+                  <td class="">¢ <?php echo $total_price["SUM(cart.qty * plan.plan_price)"] ?>.00</td>
                   <td class="">
                   </td>
                   </tr>

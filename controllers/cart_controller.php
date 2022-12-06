@@ -2,17 +2,6 @@
 //connect to the user account class
 include_once("../classes/cart_class.php");
 
-//sanitize data
-// function cleanText($data) 
-// {
-//   $data = trim($data);
-//   //$data = stripslashes($data);
-//   //$data = htmlspecialchars($data);
-//   return $data;
-// }
-
-
-
 //--INSERT--//
 
 
@@ -173,7 +162,7 @@ function delete_all_from_cart($cid){
   $select_details = new cart_class();
 
   // return method
-  $data = $select_details -> select_one_orderdetail($order_id);
+  $data = $select_details -> selectorderdetail($order_id);
     return $data;
 }
 

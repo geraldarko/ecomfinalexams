@@ -172,9 +172,9 @@ require("../controllers/plan_controller.php");
                 </div>
                 <div class="row">
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
-                    <label for="expire_date">Plan Price (GH₵)
+                    <label for="expire_date">Plan Price (GH₵) 
                     </label>
-                    <input id="expire_date" name="pprice" type="text" class="form-control validate" data-large-mode="true" />
+                    <input id="expire_date" name="pprice" type="number" min="0" class="form-control validate" data-large-mode="true" />
                   </div>
                   <div class="form-group mb-3 col-xs-12 col-sm-6">
                     <label for="stock">Keywords

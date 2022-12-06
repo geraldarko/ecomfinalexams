@@ -14,7 +14,7 @@ require("../controllers/plan_controller.php");
 
 $pid = $_GET['id'];
 
-$product_detail = select_product_ctrl($pid);
+$product_detail = select_plan_ctrl($pid);
 
 //initiating a server to get the post
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $pkey = $_POST['pkey'];
     
 
-    $check_update = update_all_product_ctrl($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $pimage, $pkey);
+    $check_update = update_all_plan_ctrl($pid, $pcat, $pbrand, $ptitle, $pprice, $pdesc, $pimage, $pkey);
     if ($check_update) {
         header("Location: ../view/a_plan.php");
     }

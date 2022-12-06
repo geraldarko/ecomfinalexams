@@ -224,7 +224,7 @@ require("../controllers/plan_controller.php");
           $search = $_GET['search'];
 
 
-          $product_search = search_products_ctrl($search);
+          $product_search = search_plans_ctrl($search);
 
           foreach ($product_search as $product_one) {
             $product_id = $product_one['plan_id'];

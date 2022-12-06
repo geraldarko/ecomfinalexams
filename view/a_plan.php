@@ -112,28 +112,28 @@ require("../controllers/plan_controller.php");
           </tr>
 
           <?php
-          $productlist = select_all_product_ctrl();
-          foreach ($productlist as $showproduct) :
+          $planlist = select_all_plan_ctrl();
+          foreach ($planlist as $showplan) :
 
           ?>
         </thead>
         <tbody>
           <tr>
-            <td class="tm-product-name"> <?php $cat = select_category_ctrl($showproduct['plan_cat']);
+            <td class="tm-product-name"> <?php $cat = select_category_ctrl($showplan['plan_cat']);
                                           echo $cat['cat_name']; ?></td>
-            <td> <?php $brand = select_style_ctrl($showproduct['plan_style']);
+            <td> <?php $brand = select_style_ctrl($showplan['plan_style']);
                   echo $brand['style_name']; ?></td>
-            <td> <?php echo $showproduct['plan_title'] ?></td>
-            <td> <?php echo $showproduct['plan_price'] ?></td>
-            <td> <?php echo $showproduct['plan_desc'] ?></td>
-            <td> <img src="<?php echo $showproduct['plan_image'] ?>" width="50" height="50"></td>
-            <td> <?php echo $showproduct['plan_keywords'] ?></td>
+            <td> <?php echo $showplan['plan_title'] ?></td>
+            <td> <?php echo $showplan['plan_price'] ?></td>
+            <td> <?php echo $showplan['plan_desc'] ?></td>
+            <td> <img src="<?php echo $showplan['plan_image'] ?>" width="50" height="50"></td>
+            <td> <?php echo $showplan['plan_keywords'] ?></td>
             <td>
 
-              <a href='../view/a_updateplan.php?id=<?php echo $showproduct['plan_id'];?>' class="tm-product-delete-link">
+              <a href='../view/a_updateplan.php?id=<?php echo $showplan['plan_id'];?>' class="tm-product-delete-link">
                 <i class="far fa-edit tm-product-delete-icon"></i>
               </a>
-              <!-- <a href="../actions/delete_plan.php?pid=<?php echo $showproduct['plan_id'];?>" class="tm-product-delete-link">
+              <!-- <a href="../actions/delete_plan.php?pid=<?php echo $showplan['plan_id'];?>" class="tm-product-delete-link">
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
               </a> -->
             </td>

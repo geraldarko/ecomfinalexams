@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
 
     if (preg_match($pattern, $password) != 1) {
         array_push($errors, "Password must contain at least one number and one uppercase 
-        and lowercase letter, and at least 8 or more characters"); 
+        and lowercase letter, and at least 6 or more characters"); 
     }
 
     if(strlen($contact) != 10){
